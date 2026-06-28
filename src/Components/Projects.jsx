@@ -10,15 +10,15 @@ const Projects = () => {
       frontend: "https://github.com/Fatimaqaiser-dev/Food-App-Frontend",
       backend: "https://github.com/Fatimaqaiser-dev/Food-App-Backend",
     },
-    {
-      title: "Portfolio Website",
-      desc: "Modern responsive portfolio built with React & Tailwind CSS.",
-      image: "/por.png",
-      tech: ["React", "Tailwind"],
-      
-      Code: "https://github.com/Fatimaqaiser-dev/Portfolio",
-      backend: "#",
-    },
+    
+{
+  title: "Portfolio Website",
+  desc: "Modern responsive portfolio built with React & Tailwind CSS.",
+  image: "/por.png",
+  tech: ["React", "Tailwind"],
+  Code: "https://github.com/Fatimaqaiser-dev/Portfolio",
+  backend: "#",
+},
     {
       title: "Todo App",
       desc: "Task management app with CRUD functionality and clean UI.",
@@ -30,10 +30,7 @@ const Projects = () => {
   ];
 
   return (
-    <section
-      id="projects"
-      className="bg-[#05060a] text-white py-20 px-5"
-    >
+    <section id="projects" className="bg-[#05060a] text-white py-20 px-5">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
           My Projects
@@ -45,27 +42,24 @@ const Projects = () => {
               key={index}
               className="relative w-full max-w-[320px] h-[260px] rounded-3xl overflow-hidden border border-cyan-400/30 shadow-[0_0_20px_rgba(34,211,238,0.15)] hover:shadow-[0_0_30px_rgba(34,211,238,0.35)] transition-all duration-300 group"
             >
-              {/* Background Image */}
+              
               <img
                 src={project.image}
                 alt={project.title}
                 className="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-110"
               />
 
-              {/* Overlay */}
               <div className="absolute inset-0 bg-black/70"></div>
 
-              {/* Content */}
+             
               <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
-                <h3 className="text-xl font-bold mb-2">
-                  {project.title}
-                </h3>
+                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
 
                 <p className="text-xs text-gray-300 mb-3 line-clamp-2">
                   {project.desc}
                 </p>
 
-                {/* Tech Stack */}
+               
                 <div className="flex flex-wrap justify-center gap-2 mb-4">
                   {project.tech.map((tech, i) => (
                     <span
@@ -77,18 +71,48 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* Buttons */}
-                <div className="flex gap-2">
-                  <a
-                    href={project.frontend}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="px-3 py-2 text-xs rounded-lg border border-cyan-400 hover:bg-cyan-400 hover:text-black transition"
-                  >
-                    Frontend
-                  </a>
+             
+                <div className="flex gap-2 flex-wrap justify-center">
 
-                  {project.backend !== "#" && (
+                 
+                  {project.title === "Todo App" && (
+                    <a
+                      href={project.Live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-3 py-2 text-xs rounded-lg bg-cyan-400 text-black font-semibold hover:bg-cyan-300 transition"
+                    >
+                      Live
+                    </a>
+                  )}
+
+                  
+                  {(project.title === "Todo App" ||
+                    project.title === "Portfolio Website") && (
+                    <a
+                      href={project.Code}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-3 py-2 text-xs rounded-lg border border-cyan-400 hover:bg-cyan-400 hover:text-black transition"
+                    >
+                      Code
+                    </a>
+                  )}
+
+                  
+                  {project.frontend && (
+                    <a
+                      href={project.frontend}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-3 py-2 text-xs rounded-lg border border-cyan-400 hover:bg-cyan-400 hover:text-black transition"
+                    >
+                      Frontend
+                    </a>
+                  )}
+
+                 
+                  {project.backend && project.backend !== "#" && (
                     <a
                       href={project.backend}
                       target="_blank"
@@ -98,6 +122,7 @@ const Projects = () => {
                       Backend
                     </a>
                   )}
+
                 </div>
               </div>
             </div>
