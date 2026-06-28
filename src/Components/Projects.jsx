@@ -16,7 +16,7 @@ const Projects = () => {
       image: "/por.png",
       tech: ["React", "Tailwind"],
       
-      frontend: "https://github.com/Fatimaqaiser-dev/Portfolio",
+      Code: "https://github.com/Fatimaqaiser-dev/Portfolio",
       backend: "#",
     },
     {
@@ -24,8 +24,8 @@ const Projects = () => {
       desc: "Task management app with CRUD functionality and clean UI.",
       image: "/todoo.png",
       tech: ["React", "LocalStorage"],
-      frontend: "https://github.com/Fatimaqaiser-dev",
-      backend: "#",
+      Live: "https://todo-nnfm-1bu6r1n3v-fatimaqaiser-devs-projects.vercel.app/",
+      Code: "https://github.com/Fatimaqaiser-dev/Todo",
     },
   ];
 
