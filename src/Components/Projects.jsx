@@ -15,7 +15,8 @@ const Projects = () => {
       desc: "Modern responsive portfolio built with React & Tailwind CSS.",
       image: "/por.png",
       tech: ["React", "Tailwind"],
-      frontend: "https://github.com/Fatimaqaiser-dev",
+      
+      frontend: "https://github.com/Fatimaqaiser-dev/Portfolio",
       backend: "#",
     },
     {
