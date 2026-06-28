@@ -24,7 +24,7 @@ const Projects = () => {
       desc: "Task management app with CRUD functionality and clean UI.",
       image: "/todoo.png",
       tech: ["React", "LocalStorage"],
-      Live: "https://todo-nnfm-1bu6r1n3v-fatimaqaiser-devs-projects.vercel.app/",
+      Live: "https://todo-nnfm.vercel.app/",
       Code: "https://github.com/Fatimaqaiser-dev/Todo",
     },
   ];
@@ -76,14 +76,14 @@ const Projects = () => {
 
                  
                   {project.title === "Todo App" && (
-                    <a
-                      href={project.Live}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="px-3 py-2 text-xs rounded-lg bg-cyan-400 text-black font-semibold hover:bg-cyan-300 transition"
-                    >
-                      Live
-                    </a>
+                   <a
+  href={project.Live}
+  target="_blank"
+  rel="noreferrer"
+  className="px-3 py-2 text-xs rounded-lg border border-cyan-400 text-cyan-400 font-semibold hover:bg-cyan-400 hover:text-black transition"
+>
+  Live
+</a>
                   )}
 
                   
